@@ -20,6 +20,7 @@ object ChainBuildAndTestAndPublishToFeedzIo : BuildType({
     steps {
         nuGetPublish {
             name = "Nuget Publish"
+            enabled = false
             toolPath = "%teamcity.tool.NuGet.CommandLine.DEFAULT%"
             packages = "*.nupkg"
             serverUrl = "%InternalNuget.OctopusDependeciesFeedUrl%"
